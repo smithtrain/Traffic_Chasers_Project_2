@@ -62,12 +62,12 @@ function createMap(LayersDict) {
 
   // Create an overlays object to add to the layer control
   var overlays = {
-    "Accidents": layers.ACCIDENT,
-    "Congestion": layers.CONGESTION,
-    "Construction": layers.CONSTRUCTION,
-    "Miscellaneous": layers.MISCELLANEOUS,
-    "Planned Event": layers.PLANNED_EVENT,
-    "Road Closer": layers.ROAD_CLOSURE
+    "Accidents": LayersDict.ACCIDENT,
+    "Congestion": LayersDict.CONGESTION,
+    "Construction": LayersDict.CONSTRUCTION,
+    "Miscellaneous": LayersDict.MISCELLANEOUS,
+    "Planned Event": LayersDict.PLANNED_EVENT,
+    "Road Closer": LayersDict.ROAD_CLOSURE
   };
   
   //// Create a layer control, pass in the baseMaps and overlayMaps. Add the layer control to the map
@@ -101,7 +101,7 @@ d3.json(url, function(response) {
   
   //console.log(response)
 
-  // Initialize an array to hold Incident markers
+  // Initialize arrays to hold Incident markers
   var AccidentMarkers = [];
   var CongestionMarkers = [];
   var ConstructionMarkers = [];
@@ -119,7 +119,7 @@ d3.json(url, function(response) {
 
     //// Add the marker to the IncidentMarkers array
     //IncidentMarkers.push(IncidentMarker);
-
+    
 
     if (Incident.Traffic_type == "ACCIDENT") {
       AccidentMarkers.push(IncidentMarker);    }

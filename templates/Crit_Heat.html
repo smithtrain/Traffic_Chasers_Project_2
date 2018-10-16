@@ -42,7 +42,7 @@
   
   var myMap = L.map('map', {
     center: [40.712, -74.006],
-    zoom: 13
+    zoom: 12
   });
   
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -68,8 +68,8 @@ d3.json(url, function(response){
   }
 
   var heat = L.heatLayer(heatArray, {
-    radius: 20,
-    blur: 35
+    radius: 60,
+    blur: 45
   }).addTo(myMap)
 
 });

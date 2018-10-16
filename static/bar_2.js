@@ -116,59 +116,12 @@ d3.json(url, function(response) {
           'rgb(0, 128, 255)',
           'rgb(255, 0, 0)',
           'rgb(255, 128, 0)',
-          'rgb(255, 255, 0)'
+          'rgb(255, 255, 0)',
         ], 
-        borderColor: [
-          'rgb(255, 99, 132)', 
-          'rgb(0, 255, 0)',
-          'rgb(0, 128, 255)',
-          'rgb(255, 0, 0)',
-          'rgb(255, 128, 0)',
-          'rgb(255, 255, 0)'
-
-        ],   
+        borderColor: 'rgb(255, 99, 132)',  
         data: typeCounts,
                                      
       }]
-    },
-    options: {
-      legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          boxWidth: 80,
-          fontColor: 'black'
-        }
-      },
-      scales: {
-        xAxes: [{
-          gridLines: {
-            display: false,
-            color: "black"
-          },
-          categorySpacing: 0,
-          scaleLabel: {
-            display: true,
-            labelString: "Number of Occurences",
-            fontColor: "red"
-          }
-        }],
-        yAxes: [{
-          categorySpacing: 0,
-          categoryPercentage: 1.0,
-          barPercentage: 1.0,
-          gridLines: {
-            color: "black",
-            borderDash: [2, 5],
-            offsetGridLines : true,
-          },
-          scaleLabel: {
-            display: true,
-            labelString: "Incident Type",
-            fontColor: "green"
-          }
-        }]
-      }
     }
   
   }); 
