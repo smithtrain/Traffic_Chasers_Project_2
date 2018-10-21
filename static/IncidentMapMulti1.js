@@ -115,7 +115,7 @@ d3.json(url, function(response) {
 
     // For each Incident, create a marker and bind a popup with the Incident's type, description, and criticality
     var IncidentMarker = L.marker([Incident.Latitude, Incident.Longitude,])
-      .bindPopup("<h3>Type: " + Incident.Traffic_type + "<h3><h3>Description: " + Incident.ItemDescr + "<h3><h3>Criticiality: " + Incident.CritDescr + "<h3><h3>Criticiality: " + Incident.Start_Time + "<h3><h3>Criticiality: " + Incident.End_Time + "<h3>");
+      .bindPopup("<h3>Type: " + Incident.Traffic_type + "<h3><h3>Description: " + Incident.ItemDescr + "<h3><h3>Criticiality: " + Incident.CritDescr + "<h3><h3>Start Time: " + Incident.Start_Time + "<h3><h3>End Time: " + Incident.End_Time + "<h3>");
 
     //// Add the marker to the IncidentMarkers array
     //IncidentMarkers.push(IncidentMarker);
